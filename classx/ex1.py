@@ -21,4 +21,5 @@ while keepGoing:
         		pygame.draw.circle(screen,color[i%3],(x,y),R)
         	hasNotDraw = False
     pygame.display.update()
-pygame.quit()
+pygame.quit()吧
+print "hhh"
