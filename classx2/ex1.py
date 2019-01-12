@@ -31,11 +31,11 @@ while keepGoing:
         elif event.type == pygame.KEYUP:
             if event.key == pygame.K_LEFT:
                 lmoving = False
-            if event.key == pygame.K_RIGHT:
+            elif event.key == pygame.K_RIGHT:
                 rmoving = False
-            if event.key == pygame.K_UP:
+            elif event.key == pygame.K_UP:
                 umoving = False
-            if event.key ==pygame.K_DOWN:
+            elif event.key ==pygame.K_DOWN:
                 dmoving = False
     if lmoving:
         x = x-1
