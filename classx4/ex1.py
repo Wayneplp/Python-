@@ -9,22 +9,22 @@ xs = [300,300,300,300,300]
 ys = [280,260,240,220,200]
 SCREENWIDTH = 1000
 SCREENHEIGHT = 1000
-img = pygame.Surface((SNEAKBODY,SNAKECOLOR))
-img = fill(SNEAKBODY)
+img = pygame.Surface((SNAKEBODY,SNAKEBODY))
+img.fill(SNAKEBODY)
 dire = "DOWN"
 pygame.init()
-screen = pygame.dispaly.set_mode((SCREENWIDTH,SCREENHEIGHT))
+screen = pygame.display.set_mode((SCREENWIDTH,SCREENHEIGHT))
 xspeend = 1
 yspeend = 1
 while keepGoing:
 	for event in pygame.event.get():
 		if event.type == QUIT:
 			keepGoing = False
-		elif event.key == KEYDOWN:
+		elif event.type == KEYDOWN:
 		    if event.key == K_UP and dire != "DOWN":
-		    	dire = "UP"
-		    	yspeend +=1
-		    elif event.key == K_DOWN and dire != "UP":
+				dire = "UP"
+				yspeend +=1
+				elif event.key == K_DOWN and dire != "UP":
 		    	dire = "DOWN"
 		    	yspeend -=1
 		    elif event.key == K_RIGHT and dire != "LEFT":
@@ -50,14 +50,10 @@ while keepGoing:
 		xs[0] = xs[0]- SNAKEBODY
 	elif dire == 'RIGHT':
 		xs[0] = xs[0] - SNAKEBODY
-
-    #print snake
-    screen.fill(BLACK)
-    for i in range(0,len(xs)):
-    	screen.bulit(img,(xs[i],ys[i]))
-
-
-    	pygame.display.update()
+	screen.fill(BLACK)
+	for i in range(0,len(xs)):
+		screen.blit(img,(xs[i],ys[i]))
+		pygame.display.update()
 
 pygame.quit()
 
