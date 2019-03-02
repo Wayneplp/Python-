@@ -143,6 +143,6 @@ while keepGoing:
     # foody = random.randint(0, (SCREENSIZE - 20) / 20) * 20
 
 
-    pygam.display.update()
+    pygame.display.update()
 
 pygame.quit()
