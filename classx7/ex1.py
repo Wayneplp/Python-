@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import itchat
 itchat.auto_login(True)
-MessText=[u"彭家琛"]
+MessText=[u"高博","彭家琛"]
 firstusers=[]
 for name in (MessText):
 	users = itchat.search_friends(name=name,
@@ -21,4 +21,4 @@ for users in (firstusers):
 # print userName
 
 for guy in (newuser):
-	itchat.send(u"我 在 用程序和你聊天",toUserName = guy)
+	itchat.send(u"内容",toUserName = guy)
